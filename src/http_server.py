@@ -130,6 +130,9 @@ def RequestHandlerClassFactory(address, ssids, rcode):
             FORM_USERNAME = 'identity'
             FORM_PASSWORD = 'passphrase'
 
+            # Brian - adding NOAA station
+            FORM_STATION = 'station'
+
             if FORM_SSID not in fields:
                 print(f'Error: POST is missing {FORM_SSID} field.')
                 return

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PFC_EDU WiFi Connect</title>
+    <!-- Brian - change tab title from "PFC_EDU WiFi Connect -->
+    <title>TideTracker Wifi Setup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Latest compiled and minified CSS -->
@@ -35,10 +36,22 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand"><img id="logo" height=30 src="/img/logo.svg"></img></a>
+          <a class="navbar-brand" title="TideTracker">
+            <img id="logo" height=30 src="/img/logo.svg" alt="TideTracker Logo">
+          </a>
         </div>
       </div>
     </nav>
+
+    <!-- Brian - Asked ChatGPT to add a title into the navbar
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand"><img id="logo" height=30 src="/img/logo.svg"></img></a>
+            </div>
+          </div>
+        </nav>
+     -->
 
     <div class="container">
 
@@ -52,7 +65,7 @@
 
       <div class="row before-submit">
         <div class="col-lg-8 col-lg-offset-1">
-          <h3>Hi! Please choose your WiFi Network from the list.</h3>
+          <h3>Please choose your WiFi Network from the dropdown list below.</h3>
         </div>
       </div>
 
@@ -87,6 +100,16 @@
                 <input type='password' class="form-control" name='passphrase'></input>
               </div>
             </div>
+            
+            <!-- Brian - added NOAA Station ID -->
+            <!-- Brian - id=" " may be wrong... -->
+            <div class="form-group hidden" id="station-group">
+              <label for="identity" class="control-label col-lg-4">NOAA Station ID</label>
+                <p>For a list of NOAA Stations, click <a href="https://tidesandcurrents.noaa.gov/stations.html" target="_blank">here</a>
+                </p>
+              <div class="col-lg-4">
+                <input class="form-control" name="station"></input>
+              </div>
 
             <div class="form-group">
               <div class="col-lg-6 col-lg-offset-1 text-center">
